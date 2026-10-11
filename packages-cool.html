@@ -474,7 +474,7 @@ document.querySelectorAll('[data-email]').forEach(a=>{
   st.textContent='.brand-sw{position:fixed;left:16px;bottom:16px;z-index:10000;display:flex;background:#fff;border-radius:99px;padding:4px;box-shadow:0 4px 18px rgba(0,0,0,.45);font:500 .72rem/1 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase}.brand-sw a{padding:10px 15px;border-radius:99px;color:#0B0B0D;text-decoration:none}.brand-sw a.on{background:#FF2E93;color:#fff}';
   document.head.appendChild(st);
   var d=document.createElement('div');d.className='brand-sw';
-  d.innerHTML='<a href="'+p1+'" class="'+(two?'':'on')+'">Branding 1</a><a href="'+p2+'" class="'+(two?'on':'')+'">Branding 2</a>';
+  d.innerHTML='<a href="'+p1+location.search+'" class="'+(two?'':'on')+'">Branding 1</a><a href="'+p2+location.search+'" class="'+(two?'on':'')+'">Branding 2</a>';
   d.addEventListener('click',function(){try{sessionStorage.setItem('jp-scroll',scrollY)}catch(e){}});
   document.body.appendChild(d);
 })();
