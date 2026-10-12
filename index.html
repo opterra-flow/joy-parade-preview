@@ -1127,7 +1127,10 @@ body{background:#0E0C0A}
 .founder p{font-size:1.18rem}
 .eyebrow,.sec-head .eyebrow,.close .k,.kicker,.peek{letter-spacing:.32em!important}
 .sec-head .rule{height:5px!important;background:none!important;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.field-photo img,.photo-col img,.founder-img img,.card img,.slides img{outline:1px solid rgba(241,233,218,.55);outline-offset:-12px}
+.field-photo img,.photo-col img,.founder-img img,.card img,.slides img{outline:none!important}
+/* the thin frame sits OUTSIDE the photo now, so it never crosses a face */
+.field-photo,.founder-img,.photo-col .ph-img{outline:1px solid rgba(241,233,218,.55);outline-offset:10px}
+.photo-col img.ph-img{outline:1px solid rgba(241,233,218,.55)!important;outline-offset:10px}
 .statement h3,.final h2{font-weight:400}
 .num,.card .num,.outcome .n{font-family:'Cormorant Garamond',Georgia,serif!important;font-style:italic;font-weight:500}
 em.k,em.scr{font-weight:500;font-size:1.12em!important}
@@ -1339,7 +1342,9 @@ body::after{opacity:.1!important}
 .outcomes-mark.in tspan.ch{opacity:1}
 .outcomes-mark tspan:not(.ch){opacity:1}
 .outcomes-mark .om-words{lengthAdjust:spacing}
+@media(max-width:700px){body.mix-bold .promise{font-size:clamp(2.2rem,10.5vw,3.4rem)!important}body.mix-bold .promise em{font-size:.9em!important}}
 </style>
+<style>.spend-hero{margin-top:6px}.spend-h{margin-top:0!important}</style>
 </head>
 <body class="pal-duo scr-ital mix-bold">
 <div class="glow" id="glow"></div>
@@ -1470,7 +1475,7 @@ into an
     <div class="sec-head"><h2 class="display" data-split="words">why it works</h2><div class="rule"></div></div>
     <div class="science">
       <div>
-        <div class="spend-hero"><div class="spend-n" data-count="12">12%</div><p class="spend-h">Happier people <em>spend more.</em></p></div>
+        <div class="spend-hero"><p class="spend-h">Happier people <em>spend more.</em></p></div>
         <div class="for-you"><span>Why this matters to you</span>Your pitch, your ask and your sponsor hall all land on whatever mood the room is in. A Joy Parade changes it first.</div>
       </div>
       <div class="chart">

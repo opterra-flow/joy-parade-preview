@@ -613,6 +613,60 @@ a.btn:hover,a.btn-ghost:hover,.btn:hover,.btn-ghost:hover{border-color:#D4FF3F!i
 .cs h4{font-family:'Instrument Serif','Playfair Display',Georgia,serif!important;font-weight:400!important;font-size:clamp(1.9rem,2.8vw,2.5rem)!important;letter-spacing:-.02em!important}
 .cs .sci-stat b{font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;text-shadow:none!important}
 @media(max-width:1000px){.cs::before,.cs::after{display:none}.cs{padding-top:26px!important}}
+.sci-attn{margin-top:60px;padding-top:34px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.attn-copy h4{margin-top:6px;font-family:'Instrument Serif','Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(2rem,3.4vw,3rem);line-height:1;letter-spacing:-.02em;color:#fff;text-transform:none}
+.attn-copy p{margin-top:14px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;line-height:1.24;font-weight:500;color:#E6DDCB;max-width:44ch}
+.attn-copy .cite{display:block;margin-top:16px;font-family:var(--track);font-style:italic;font-size:.7rem;color:var(--muted)}
+.attn-viz{display:flex;flex-direction:column;gap:30px}
+.attn-row{display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:end}
+.attn-lab{font-family:var(--track);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#E6DDCB}
+.attn-val{font-family:'Instrument Serif','Playfair Display',Georgia,serif;font-size:clamp(2.6rem,5vw,4.4rem);line-height:.8;letter-spacing:-.03em;color:#F1E9DA;font-variant-numeric:tabular-nums}
+.attn-row.hot .attn-val{color:#D4FF3F;text-shadow:0 0 30px rgba(212,255,63,.28)}
+.attn-track{grid-column:1/-1;grid-row:2;height:16px;background:rgba(241,233,218,.1);border-radius:8px;overflow:hidden}
+.attn-row .attn-val{grid-column:2;grid-row:1}
+.attn-fill{height:100%;width:0;border-radius:8px;background:#8A8A93;transition:width 1.6s cubic-bezier(.22,.8,.3,1) .3s}
+.attn-row.hot .attn-fill{background:linear-gradient(90deg,#FF5C9F,#D4FF3F);box-shadow:0 0 18px rgba(212,255,63,.45);transition-delay:1s}
+.sci-attn.in .attn-fill{width:var(--w)}
+.attn-note{font-family:var(--track);font-size:.72rem;letter-spacing:.04em;color:var(--muted)}
+.sci-honest{margin-top:48px!important}
+@media(max-width:900px){.sci-attn{grid-template-columns:1fr;gap:28px}}
+@media(prefers-reduced-motion:reduce){.attn-fill{width:var(--w);transition:none}}
+.attn-note{font-family:'Cormorant Garamond',Georgia,serif!important;font-size:1.25rem!important;line-height:1.26;font-weight:500;letter-spacing:0!important;color:#E6DDCB!important;max-width:46ch}
+.attn-note i{display:block;margin-top:10px;font-family:var(--track);font-style:italic;font-size:.7rem;letter-spacing:.03em;color:var(--muted)}
+.attn-viz .attn-note{margin-bottom:6px}
+.sci-honest{max-width:62ch!important;margin:64px auto 0!important;text-align:center}
+.sci-cta{display:block!important;width:max-content;margin:28px auto 0!important}
+.sci{padding-bottom:140px}
+.sci-cta{display:block!important;width:fit-content!important;max-width:calc(100% - 32px);margin:28px auto 0!important;text-align:center;white-space:normal}
+@media(max-width:700px){.sci-cta{padding:16px 22px!important;letter-spacing:.14em!important;font-size:.72rem!important;line-height:1.4}}
+.fig-study{margin-top:22px;max-width:62ch}
+.fig-study p{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;line-height:1.26;font-weight:500;color:#E6DDCB}
+.fig-study i{display:block;margin-top:10px;font-family:var(--track);font-style:italic;font-size:.7rem;letter-spacing:.03em;color:var(--muted)}
+.sci-cta{padding:13px 24px!important;font-size:.7rem!important;letter-spacing:.2em!important}
+.sci-honest{margin:56px auto 0!important}
+.sci-cta{margin:36px auto 0!important}
+.sci{padding-bottom:0!important}
+.sci .wrap{padding-bottom:84px}
+@media(max-width:700px){.sci-cta{padding:13px 20px!important}}
+.attn-disc{margin:6px 0 0;max-width:46ch;text-align:left;font-family:var(--track);font-size:.78rem;letter-spacing:.03em;line-height:1.6;color:var(--muted)}
+.sci-cta{margin:48px auto 0!important}
+/* RHYTHM: one spacing system. 72 between a headline and its first block, 104 between sections,
+   56 under each hairline, tops of two-column blocks aligned, 96 before the pink banner. */
+.sci{padding-top:176px!important}
+.sci-chain{margin-top:72px!important}
+.sci-caveat{margin:28px 0 0!important}
+.sci-speed,.sci-attn{margin-top:104px!important;padding-top:56px!important;align-items:start!important}
+.sci-speed-copy,.attn-copy,.attn-viz,.sci-fig{margin:0}
+.sci-speed-copy h4,.attn-copy h4{margin-top:0!important}
+.attn-viz .attn-note,.fig-study{margin-top:0}
+.sci-fig{display:flex;flex-direction:column}
+.sci-fig figcaption{order:2;margin-top:8px}
+.fig-study{order:3;margin-top:28px!important}
+.attn-viz{gap:34px!important}
+.attn-disc{margin-top:0!important}
+.sci-cta{margin:80px auto 0!important}
+.sci .wrap{padding-bottom:104px!important}
+@media(max-width:1000px){.sci{padding-top:130px!important}.sci-speed,.sci-attn{margin-top:72px!important;padding-top:40px!important}.sci-cta{margin-top:56px!important}.sci .wrap{padding-bottom:80px!important}}
 </style>
 </head>
 <body>
@@ -671,11 +725,8 @@ a.btn:hover,a.btn-ghost:hover,.btn:hover,.btn-ghost:hover{border-color:#D4FF3F!i
 
     <div class="sci-speed sci-rise">
       <div class="sci-speed-copy">
-        <div class="sci-n">Speed</div>
         <h4>Strangers connect faster</h4>
-        <p>New classes of strangers. After one month, the singers already felt close. Craft and writing classes took three months to catch up.</p>
         <div class="sci-for"><span>For you</span>Most events give you hours, not months. A shared activity gets strangers close sooner.</div>
-        <i class="cite">Pearce, Launay &amp; Dunbar (2015)</i>
       </div>
       <figure class="sci-fig">
         <svg viewBox="0 0 1124 330" role="img" aria-label="Line chart, illustrative: closeness to the group over seven months. A singing group rises fast and reaches a high level in month one. Craft and writing groups rise slowly and catch up by month three.">
@@ -693,11 +744,31 @@ a.btn:hover,a.btn-ghost:hover,.btn:hover,.btn-ghost:hover{border-color:#D4FF3F!i
           <text class="g-lab g-l2" x="1000" y="104" text-anchor="end">craft and writing groups</text>
         </svg>
         <figcaption>Illustrative. The shape follows the study&rsquo;s findings, not exact values.</figcaption>
+        <div class="fig-study"><p>Researchers followed brand-new adult education classes over seven months. The people in each class were strangers when they started. Some joined singing classes, and others joined craft or creative-writing classes. At one, three and seven months, everyone rated how close they felt to their group. The singers felt close almost right away. The craft and writing classes got to the same closeness by month three, so singing didn&rsquo;t make the bond stronger. It made it faster.</p><i>Pearce, Launay &amp; Dunbar (2015)</i></div>
       </figure>
     </div>
 
-    <p class="sci-also-line sci-rise"><b>Also, attention.</b> A short burst of structured movement lifted on-task behavior by 8% overall, and by 20% among the least engaged. <i>Mahar et al. (2006), Medicine &amp; Science in Sports &amp; Exercise.</i> <b>For you:</b> your next speaker gets a more attentive room.</p>
-    <p class="sci-honest sci-rise">These are studies of other groups, not of Joy Parade. We do not promise these results in your room.</p>
+    <div class="sci-attn sci-rise">
+      <div class="attn-copy">
+        <h4>Keeping a room engaged isn&rsquo;t easy</h4>
+        <p>After a long day of sitting, with phones and distractions pulling at everyone, attention naturally drifts. A short, intentional energizer break brings people back.</p>
+        <div class="sci-for"><span>For you</span>Your next speaker walks on to a room that is back with them, including the people who had been on their phones.</div>
+      </div>
+      <div class="attn-viz" aria-label="On-task behavior after a movement break: +8% for everyone, +20% for the least engaged">
+        <div class="attn-note">Researchers measured how many students were on task in class before and after a short, structured movement break. After the break, on-task behavior rose 8% overall. Among the students who were least on task beforehand, it rose 20%.<i>Mahar et al. (2006), Medicine &amp; Science in Sports &amp; Exercise</i></div>
+        <div class="attn-row">
+          <div class="attn-lab">Everyone</div>
+          <div class="attn-track"><div class="attn-fill" style="--w:40%"></div></div>
+          <div class="attn-val"><span data-to="8">+8</span>%</div>
+        </div>
+        <div class="attn-row hot">
+          <div class="attn-lab">The ones who had checked out</div>
+          <div class="attn-track"><div class="attn-fill" style="--w:100%"></div></div>
+          <div class="attn-val"><span data-to="20">+20</span>%</div>
+        </div>
+        <p class="attn-disc">These are studies of other groups, not of Joy Parade. We do not promise these results in your room.</p>
+      </div>
+    </div>
     <a href="math-cool.html" class="btn sci-cta sci-rise">See what it means for your numbers</a>
   </div>
 </section>
@@ -815,6 +886,23 @@ document.querySelectorAll('[data-email]').forEach(a=>{
   build(); raf=requestAnimationFrame(frame);
   var tm; addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(function(){build();if(rm)frame(performance.now())},150)});
   document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf)}else if(!rm){raf=requestAnimationFrame(frame)}});
+})();
+</script>
+<script>
+/* attention bars: fill, then the numbers count up */
+(function(){
+  var box=document.querySelector('.sci-attn'); if(!box) return;
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var vals=[].slice.call(box.querySelectorAll('.attn-val span'));
+  if(rm){vals.forEach(function(v){v.textContent='+'+v.getAttribute('data-to')});return}
+  vals.forEach(function(v){v.textContent='+0'});
+  new IntersectionObserver(function(es,o){es.forEach(function(e){
+    if(!e.isIntersecting) return; o.disconnect();
+    vals.forEach(function(v,i){
+      var to=+v.getAttribute('data-to'), t0=performance.now()+(i?1000:300), D=1500;
+      (function f(t){var p=Math.max(0,Math.min(1,(t-t0)/D));v.textContent='+'+Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(performance.now());
+    });
+  })},{threshold:.35}).observe(box);
 })();
 </script>
 <script>
